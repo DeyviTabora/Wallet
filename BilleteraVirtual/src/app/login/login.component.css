@@ -1,0 +1,135 @@
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .app{
+      display: flex;
+      padding: 0;
+      margin: 0;
+  }
+  
+  .left{
+      height: 100vh;
+      width: 400px;
+      min-width: 400px;
+      max-width: 400px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+  }
+  
+  .apptittle{
+      display: flex;
+  }
+  
+  h3{
+      margin-bottom: 10px;
+      font-size: 2em;
+      font-kerning: all;
+      font-weight: bolder;
+      letter-spacing: 0.35rem;
+      color: #34495e;
+  }
+  h5{
+    color: #34495e;  
+  }
+  
+  h3:nth-child(2){
+      padding-top: 10px;
+  }
+  
+  
+  .submitButton{
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+      margin-top: 20px;
+      padding: 10px 15px 10px 15px;
+      background-color: #34495e;
+      transition: 0.3s;
+      cursor: pointer;
+  }
+
+  .btnSocial{
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .submitButton:hover{
+      background-color: #607d8b;
+  }
+  
+  .underline{
+      margin-top: -1px;
+      width: 0px;
+      height: 2px;
+      background-color: #34495e;
+      transition: 0.3s;
+  }
+  
+  label{
+      margin-top: 8px;
+      color: #34495e;
+      width: 260px;
+      transition: 0.3s;
+  }
+  
+  form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  input[type="text"], input[type="password"]{
+      margin-top: 10px;
+      border: 0;
+      border-bottom: solid 2px;
+      width: 260px;
+      border-color: #b3b3b3;
+  }
+  
+  input[type="text"]:focus + .underline, input[type="password"]:focus + .underline{
+      width: 260px;
+  }
+  
+  #btnTransparen{
+      color: white;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+  } 
+  
+  input:focus, button:focus {
+      outline:none;
+  }
+  
+  /*///
+  
+  */
+  
+  .right{
+      padding: 0;
+      background-image: url("/assets/img/Wallet.png");
+      /* background: #0e6ec7; */
+      /* background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8); */
+      width: 100%;
+      height:100vh;
+      overflow: hidden;
+    }
+
+    ul.nav li a:hover {
+        background:rgb(10, 106, 216);
+    }
+
+    .sombra{
+        -webkit-box-shadow: 1px 6px 8px 0px rgba(106,107,112,0.33);
+        -moz-box-shadow: 1px 6px 8px 0px rgba(106,107,112,0.33);
+        box-shadow: 1px 6px 8px 0px rgba(106,107,112,0.33);
+    }

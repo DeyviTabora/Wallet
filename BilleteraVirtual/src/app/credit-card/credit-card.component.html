@@ -1,0 +1,27 @@
+<div class="shadow p-3">
+<div>
+    <div>
+      <h4>Egresos</h4>
+    </div>
+    <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Banco</th>
+        <th scope="col">Cuenta</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Monto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let expenses of expense">
+        <td>{{expenses.BankName}}</td>
+        <td>{{expenses.TypeName}}</td>
+        <td>{{expenses.ExpenseDescription}}</td>
+        <td>{{expenses.ExpenseDateTransaction | date:'dd/MM/yyyy'}}</td>
+        <td>L.{{expenses.ExpenseAmount}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>

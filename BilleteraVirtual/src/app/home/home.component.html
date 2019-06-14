@@ -1,0 +1,21 @@
+<div class="shadow rounded p-3">
+  <div>
+    <h4>Cuentas</h4>
+  </div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Banco</th>
+      <th scope="col">Cuenta</th>
+      <th scope="col">Cantidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let accounts of account">
+      <td>{{accounts.BankName}}</td>
+      <td>{{accounts.TypeName}}</td>
+      <td>L.{{accounts.AccountAmount}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

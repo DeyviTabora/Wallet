@@ -1,0 +1,43 @@
+<nav *ngIf="getUser()" class="navbar pb-3 navbar-light bg-primary">
+  <a class="navbar-brand">
+    <h3>Virtual Wallet</h3>
+    <!-- <i class="fa fa-bars fa-2x" id="menu-toggle" aria-hidden="true"></i> -->
+  </a>
+</nav>
+<div class="d-flex" id="wrapper">
+  <div *ngIf="getUser()" class="border-right bg-white" id="sidebar-wrapper">
+    <div class="sidebar-heading">
+      <img class="img-responsive img-rounded mb-2" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+      alt="User picture">
+      <div class="user-info">
+          <span class="user-name">
+            <p id="Email">{{user.Email}}</p>
+          </span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+        </div>
+      </div>
+    <div class="list-group list-group-flush">
+      <a routerLink="/Inicio" class="list-group-item list-group-item-action" id="navIco"><i class="fa fa-home navIco fa-lg" id="menu-toggle" aria-hidden="true"></i>
+        Inicio</a>
+      <a routerLink="/Historial" class="list-group-item list-group-item-action"><i class="fa fa-history navIco fa-lg"
+          aria-hidden="true"></i>Historial</a>
+      <a routerLink="/TarjetaDebito" class="list-group-item list-group-item-action"><i class="fa fa-credit-card navIco fa-lg"
+          aria-hidden="true"></i> Tarjeta de debito</a>
+      <a routerLink="/TarjetaCredito" class="list-group-item list-group-item-action"><i class="fa fa-credit-card-alt navIco fa-lg"
+          aria-hidden="true"></i>
+        Tarjeta de credito</a>
+      <a routerLink="/balance" class="list-group-item list-group-item-action"><i class="fa fa-bar-chart navIco fa-lg"
+          aria-hidden="true"></i>Balance<span class="badge badge-primary ml-2">4</span></a>
+      <a (click)="signOut()" class="list-group-item list-group-item-action"><i class="fa fa-sign-out navIco fa-lg"
+          aria-hidden="true"></i>Salir</a>
+    </div>
+  </div>
+  <div id="page-content-wrapper" [ngClass]="{'margen': getUser()}">
+    <div [ngClass]="{'container-fluid': getUser()}">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
